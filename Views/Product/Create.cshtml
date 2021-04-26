@@ -1,0 +1,27 @@
+@model Product
+
+<form method="POST">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Price">Fiyat</label>
+        <input asp-for="Price" class="form-control">
+    </div>
+    <div class="form-Description">
+        <label for="Name">Description</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+     <div class="form-group">
+        <label for="ImageUrl">ImageUrl</label>
+        <input asp-for="ImageUrl" class="form-control">
+    </div>
+     <div class="form-group">
+        <label for="CategoryId">CategoryId</label>
+        <select asp-for="CategoryId" asp-items="@ViewBag.Categories" class="form-control">
+            <option selected disabled>Seçiniz</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
